@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WAFFLE</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<style type="text/css">
+	head, body, html, div, section, footer{margin: 0;overflow: hidden;}
+	body{background: #E6E6E6;}
+	div{display: block;}
+	nav{position: absolute; padding-top: 20px; padding-left:1400px;}
+		nav ul{margin: auto;}
+		nav ul li{list-style: none; width: auto; height: 40px;}
+		nav ul li a{text-decoration: none; color: #8E8E8E; font-family:'Noto Sans KR', sans-serif;font-size: 25px; font-weight: 900;}
+		nav ul li a:hover{color: #FFBD48;text-decoration:none; transition: all 0.2s;}
+
+	div form button a{width: 30px; height: 30px;}
+
+
+	.flex{display: flex; justify-content: center;}
+	.absolute{position:  absolute;}
+	.relative{position: relative;}
+	.header{z-index: 5; width:600px;}
+	.searchbar{z-index: 6; }
+	*{box-sizing: border-box;}
+	form.searchbar input[type=text] {padding: 10px;
+  									font-family: 'Noto Sans KR', sans-serif;
+  									font-weight: 400;
+  									font-size: 15px;
+									border-radius: 30px;
+									text-decoration: none;
+									border-width: 0px;
+									border: 3px solid lightgrey;
+									float: left;
+									width: 75%;
+									height: 15%;
+									color: #B7B7B7;
+									background: #ffffff;
+									outline: none;}
+	form.searchbar button {float: left;
+						  width: 47px;
+						  margin-left: 5px;
+						  padding: 10px;
+						  background: #CECECE;
+						  color: white;
+						  font-size: 15px;
+						  height: 47px;
+						  border: 0px;
+						  border-radius: 100px;
+						  border-left: none; /* Prevent double borders */
+						  cursor: pointer;}
+	form.searchbar button:hover {background: #FFBD48;}
+	form.searchbar::after {content: "";
+						  clear: both;
+						  display: table;}
+
+	#hpu{width: 180px; height: 45px;
+    	margin: auto;
+	    position: absolute;
+	    top: 560px;
+	    left: 300px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: hpu 4s ease-in-out infinite alternate;}
+	    @keyframes hpu {from{top: 350px;} to{top: 0px;}}
+
+	#hpi{width: 180px; height: 45px;
+    	margin: auto;
+	    position: absolute;
+	    top: 560px;
+	    left: 1040px;
+	    z-index: 11;
+	    -webkit-user-select: none;
+	    animation: hpi 4s ease-in-out infinite alternate;}
+	    @keyframes hpi {from{top: 200px;} to{top: 420px;}}
+
+	#hgr{width: 400px; height: 45px;
+    	margin: auto;
+	    position: absolute;
+	    top: 560px;
+	    left: 1100px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: hgr 4s ease-in-out infinite alternate;}
+	    @keyframes hgr {from{top: 430px;} to{top: 40px;}}
+
+	#hbl{width: 375px; height: 45px;
+    	margin: auto;
+	    position: absolute;
+	    top: 560px;
+	    left: 80px;
+	    z-index: 11;
+	    -webkit-user-select: none;
+	    animation: hbl 4s ease-in-out infinite alternate;}
+	    @keyframes hbl {from{top: 100px;} to{top: 400px;}}
+
+	#ibl{width: 130px; height: 130px;
+    	margin: auto;
+	    position: absolute;
+	    top: 00px;
+	    left: 1260px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: ibl 4s ease-in-out infinite alternate;}
+	    @keyframes ibl {from{top: 0px;} to{top: 140px;}}
+
+	#igr{width: 120px; height: 120px;
+    	margin: auto;
+	    position: absolute;
+	    top: 200px;
+	    left: 100px;
+	    z-index: 12;
+	    -webkit-user-select: none;
+	    animation: igr 4s ease-in-out infinite alternate;}
+	    @keyframes igr {from{top: 220px;} to{top: 400px;}}
+
+	#igre{width: 230px; height: 230px;
+    	margin: auto;
+	    position: absolute;
+	    top: 200px;
+	    left: 1390px;
+	    z-index: 8;
+	    -webkit-user-select: none;
+	    animation: igre 4s ease-in-out infinite alternate;}
+	    @keyframes igre {from{top: 1px;} to{top: 370px;}}
+
+	#ipu{width: 150px; height: 150px;
+    	margin: auto;
+	    position: absolute;
+	    top: 10px;
+	    left: 240px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: ipu 4s ease-in-out infinite alternate;}
+	    @keyframes ipu {from{top: 0px;} to{top: 140px;}}
+
+	#ipi{width: 260px; height: 260px;
+    	margin: auto;
+	    position: absolute;
+	    top: 200px;
+	    left: -100px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: ipi 4s ease-in-out infinite alternate;}
+	    @keyframes ipi {from{top: 200px;} to{top: 1px;}}
+
+	#ipur{width: 180px; height: 180px;
+    	margin: auto;
+	    position: absolute;
+	    top: 200px;
+	    left: 1020px;
+	    z-index: 10;
+	    -webkit-user-select: none;
+	    animation: ipur 4s ease-in-out infinite alternate;}
+	    @keyframes ipur {from{top: 370px;} to{top: 150px;}}
+
+	#soundBut{margin-top: 20px;
+					margin-left: 30px;
+					width: 50px;
+					height: 50px;
+					opacity: 100;}
+
+
+	.waffle{position: absolute; left: 0; top: 0; z-index: 1; opacity: 55%; pointer-events: none;}
+
+	#poetText{z-index: 20; position: absolute; left: calc(50% - 210px); top: 235px;
+					font-size: 1.2em; font-family: 'Hahmlet', serif; text-align: center; 
+					line-height: 170%; color:black;text-decoration:none; -webkit-user-select: none;}
+	.word{opacity: 0 ; animation: fadein 0.5s forwards;}
+		@keyframes fadein{
+			to{opacity: 1;}}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="sub.html">INFO</a></li>
+		</ul>
+	</nav>
+	<section>
+		<div class="absolute">
+				<img id="soundBut" src="mute.png">
+				<audio id= "musicSnd" src="musiccut.mp3"></audio>
+			</div>
+	</section>
+	<section>
+		<div class="flex" style="margin-top: 25px">
+			<img class="header" src="header.png">
+		</div>
+		<div class="flex" style="margin-top: 20px">
+			<form action="https://www.google.com/search" method="GET" class="searchbar">
+	    		<div class="mx-auto searchbar input-group mb-3">
+	      			<input name="q" type="text" class="form-control rounded-pill" placeholder="#hashtag" aria-label="Recipient's username" aria-describedby="button-addon2">
+	      			<div class="input-group-append">
+	      				<button type="submit"><i class="fa fa-search"></i></button>
+	      			</div>
+	    		</div>
+ 			 </form>
+  				<div class="input-group-append">
+     		 </div>
+		</div>
+	</section>
+	<section>
+		<div class="relative">
+			<img id="hpu" src="Hpurple.png">
+			<img id="hpi" src="Hpink.png">
+			<img id="hgr" src="Hgreen.png">
+			<img id="hbl" src="Hblue.png">
+			<img id="ipu" src="Ipurple.png">
+			<img id="igr" src="Igreen.png">
+			<img id="igre" src="Igreen.png">
+			<img id="ibl" src="Iblue.png">
+			<img id="ipi" src="Ipink.png">
+			<img id="ipur" src="Ipurple.png">
+			<img src="Ipink.png" style="opacity: 0%;">
+		</div>
+	</section>
+	<section>
+		<div id="poetText"></div>
+	</section>
+
+	<script type="text/javascript">
+
+
+		var state = false;
+
+		var myTimer;
+  		soundBut.onclick = function (){
+  			if(state){
+  				soundBut.src = "mute.png";
+  				musicSnd.pause();
+  				state = false;
+  			}
+  			else{
+  				soundBut.src = "sound.png";
+  				musicSnd.play();
+  				state = true;
+  				myTimer = setInterval(print,4530);
+  			}
+  		}
+
+
+		var poet = "와플 먹어, 십자가 네 개 붙어있어 맹신해 yes, hashtag<br>\r\n 이름에 붙여서 침대에 늘어져 보는 거 (search, search)<br>\r\n 박혀 있어, 방구석에서 늘어져 있어 (hey)<br>\r\n 쟤랑 걔 사귄대 난 별로 관심 없는데 (난리 났어)<br><br>\r\n 가만히 있어도 물어뜯을 걸 갖다 줘 고맙지 뭐<br>\r\n 걸레짝 되면 또 딴 얘깃거리 갈아타면 되지 뭐<br>\r\n 심심했는데 잘 됐어 그래서 어떻게 됐다고<br>\r\n 와플 먹어 너도 한번 씹어, 악플 먹어<br><br>\r\n  쟤랑 걔랑 사귄대 (그렇다 카더라)<br>\r\n 내 친구의 사촌의 선배의 친구의 사돈이 봤대 (그렇다 카더라)<br>\r\n 쟤랑 걔랑 싸웠대 (그렇다 카더라)<br>\r\n다 뒤집고 엎고 치고 아수라 난장판 내놨대 (아님 말고)<br>\r\n 도가 텄어, 다들 도가 텄어 남 얘기하는 거<br>\r\n 걔가 성격이 그리 거지 같대 (그래 보여)<br>\r\n 아니 별건 없고 그냥 태도가 별로야<br>\r\n 눈빛이나 주머니 손꼽은 거나 (다 맘에 안 들어)<br><br>\r\n 가만히 있어도 물어뜯을 걸 갖다 줘 고맙지 뭐<br>\r\n 걸레짝 되면 또 딴 얘깃거리 갈아타면 되지 뭐<br>\r\n 대단한 무당 나셨어 눈빛만 봐도 척척 (알아)<br>\r\n 와플 먹어 너도 한번 씹어, 악플 먹어<br><br>\r\n 쟤랑 걔랑 사귄대 (그렇다 카더라)<br>\r\n 내 친구의 사촌의 선배의 친구의 사돈이 봤대 (그렇다 카더라)<br>\r\n 쟤랑 걔랑 싸웠대 (그렇다 카더라)<br>\r\n 다 뒤집고 엎고 치고 아수라 난장판 내놨대 (아님 말고)<br>\r\n 야, 야, 그렇게 막 말해도 돼 에이 뭐 어때 (안될 건 또 뭐야, 뭐야)<br>\r\n 그래 뭐 (걔 걱정해서 뭐 해)<br>\r\n 그래 뭐 (걔 실드 쳐서 뭐 해)<br>\r\n 그래 뭐 (알아서 잘 살겠지)<br><br>\r\n 쟤랑 걔랑 사귄대 (그렇다 카더라)<br>\r\n 내 친구의 사촌의 선배의 친구의 사돈이 봤대 (그렇다 카더라)<br>\r\n 쟤랑 걔랑 싸웠대 (그렇다 카더라)<br>\r\n 다 뒤집고 엎고 치고 아수라 난장판 내놨대 (아님 말고)<br>\r\n";
+	var poetArr = poet.split("\r\n");
+	console.log(poetArr);
+
+	
+
+	var s=0;
+	
+	function print(){
+
+		if(s%12 == 0){ poetText.innerHTML = "";}
+
+		var t= document.createElement("span");
+		t.innerHTML = poetArr[s] + " ";
+		t.className = "word";
+		poetText.appendChild(t);
+
+		s++; console.log(s)
+
+		//poetText.innerHTML += "<span class='word'>" + poetArr[s] + "</span> ";
+		if(s == poetArr.length){
+			clearInterval(myTimer);
+		}
+	}
+
+
+
+
+		var a = ["waffle", "waffle2"];
+
+	for(var i=0;i<20;i++){
+		var t = document.createElement("img");
+		t.src = a[randomBH(0,1)] + ".png";
+		t.className = "waffle";
+		t.style.width = randomBH(150,300) + "px";
+		t.style.height = "auto";
+		t.style.left = Math.random()*screen.availWidth + "px";
+		t.style.top = Math.random()*screen.availHeight + "px";
+		document.body.appendChild(t);
+	}
+
+		function randomBH(min, max) {
+  		min = Math.ceil(min);
+  		max = Math.floor(max);
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	</script>
+
+</body>
+</html>
